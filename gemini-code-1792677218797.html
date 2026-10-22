@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Wedding of Rafi & Denisa</title>
+  
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&family=Sacramento&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Audio Background -->
+  <audio id="bg-music" loop>
+    <source src="Romansa-Masa-Depan.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- Floating Music Toggle -->
+  <button id="music-btn" class="music-control hidden" onclick="toggleMusic()">
+    <i class="fa-solid fa-compact-disc fa-spin"></i>
+  </button>
+
+  <!-- COVER SECTION (MODAL OVERLAY) -->
+  <section id="cover-screen" class="cover-container">
+    <div class="cover-content">
+      <p class="subtitle">The Wedding of</p>
+      <h1 class="couple-title">Rafi & Denisa</h1>
+      <p class="date-text"><i class="fa-regular fa-calendar"></i> Sabtu, 14 November 2026</p>
+      
+      <div class="guest-box">
+        <p class="guest-label">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
+        <h3 id="guest-name">Nama Tamu</h3>
+      </div>
+
+      <button class="btn-primary" onclick="openInvitation()">
+        <i class="fa-solid fa-envelope-open"></i> Buka Undangan
+      </button>
+    </div>
+  </section>
+
+  <!-- KONTEN UTAMA UNDANGAN -->
+  <main id="main-content" class="content-container hidden">
+    
+    <!-- Hero / Header -->
+    <header class="hero-section">
+      <div class="hero-overlay">
+        <p class="subtitle">Walimatul 'Ursy</p>
+        <h1 class="couple-title">Rafi & Denisa</h1>
+        <p class="date-text">Sabtu, 14 November 2026</p>
+      </div>
+    </header>
+
+    <!-- Ayat Suci / Kutipan -->
+    <section class="section-card text-center">
+      <div class="arabic-text">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً</div>
+      <p class="quote-text">
+        "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu istri-istri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang."
+      </p>
+      <p class="quote-author">(QS. Ar-Rum: 21)</p>
+    </section>
+
+    <!-- Mempelai -->
+    <section class="section-card">
+      <h2 class="section-title">Mempelai</h2>
+      <p class="section-subtitle">Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan pernikahan kami:</p>
+      
+      <div class="couple-wrapper">
+        <!-- Groom -->
+        <div class="mempelai-box">
+          <div class="avatar-placeholder"><i class="fa-solid fa-user-tie"></i></div>
+          <h3 class="mempelai-nama">Muhammad Rafi Fadhilah</h3>
+          <p class="mempelai-ortu">
+            Putra pertama dari pasangan<br />
+            <strong>Drs. H. Achmad Salahuddin M.Si.</strong> & <strong>Hj. Dwi Arshanti</strong>
+          </p>
+        </div>
+
+        <div class="ampersand">&</div>
+
+        <!-- Bride -->
+        <div class="mempelai-box">
+          <div class="avatar-placeholder"><i class="fa-solid fa-user-dress"></i></div>
+          <h3 class="mempelai-nama">Denisa Apriliani</h3>
+          <p class="mempelai-ortu">
+            Putri ketiga dari pasangan<br />
+            <strong>Alm. Muhammad Sofi'i</strong> & <strong>Sri Purwani</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Countdown Timer -->
+    <section class="section-card text-center bg-gold">
+      <h2 class="section-title text-white">Menuju Hari Bahagia</h2>
+      <div id="timer" class="timer-container">
+        <div class="timer-box"><span id="days">0</span><small>Hari</small></div>
+        <div class="timer-box"><span id="hours">0</span><small>Jam</small></div>
+        <div class="timer-box"><span id="minutes">0</span><small>Menit</small></div>
+        <div class="timer-box"><span id="seconds">0</span><small>Detik</small></div>
+      </div>
+    </section>
+
+    <!-- Detail Acara -->
+    <section class="section-card">
+      <h2 class="section-title">Rangkaian Acara</h2>
+
+      <div class="event-grid">
+        <!-- Akad -->
+        <div class="event-card">
+          <i class="fa-solid fa-ring event-icon"></i>
+          <h3>Akad Nikah</h3>
+          <p class="event-time"><i class="fa-regular fa-clock"></i> Sabtu, 14 November 2026</p>
+          <p class="event-location">
+            <strong>Gedung Slog Polri Cipinang</strong><br />
+            Jl. Bekasi Timur Raya No.86, RT.1 / RW.6, Cipinang, Kec. Pulogadung, Kota Jakarta Timur, DKI Jakarta 13240
+          </p>
+        </div>
+
+        <!-- Resepsi -->
+        <div class="event-card">
+          <i class="fa-solid fa-champagne-glasses event-icon"></i>
+          <h3>Resepsi</h3>
+          <p class="event-time"><i class="fa-regular fa-clock"></i> Sabtu, 14 November 2026</p>
+          <p class="event-location">
+            <strong>Gedung Slog Polri Cipinang</strong><br />
+            Jl. Bekasi Timur Raya No.86, RT.1 / RW.6, Cipinang, Kec. Pulogadung, Kota Jakarta Timur, DKI Jakarta 13240
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center margin-top">
+        <a href="https://maps.google.com/?q=Gedung+Slog+Polri+Cipinang" target="_blank" class="btn-secondary">
+          <i class="fa-solid fa-map-location-dot"></i> Buka Google Maps
+        </a>
+      </div>
+    </section>
+
+    <!-- Konfirmasi Kehadiran (RSVP) -->
+    <section class="section-card">
+      <h2 class="section-title">Konfirmasi Kehadiran</h2>
+      <p class="section-subtitle">Mohon konfirmasi kehadiran Anda melalui WhatsApp di bawah ini:</p>
+
+      <form id="rsvp-form" class="rsvp-form">
+        <div class="form-group">
+          <label for="rsvp-name">Nama Lengkap</label>
+          <input type="text" id="rsvp-name" required placeholder="Masukkan nama Anda" />
+        </div>
+        <div class="form-group">
+          <label for="rsvp-status">Status Kehadiran</label>
+          <select id="rsvp-status" required>
+            <option value="Hadir">Hadir</option>
+            <option value="Tidak Hadir">Tidak Dapat Hadir</option>
+            <option value="Ragu-ragu">Masih Ragu-ragu</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="rsvp-count">Jumlah Tamu</label>
+          <input type="number" id="rsvp-count" value="1" min="1" max="5" required />
+        </div>
+        <button type="submit" class="btn-primary btn-block">
+          <i class="fa-brands fa-whatsapp"></i> Kirim Konfirmasi VIA WhatsApp
+        </button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+      <p>Terima kasih atas doa dan restu Anda</p>
+      <h3>Rafi & Denisa</h3>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
