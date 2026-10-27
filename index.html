@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Wedding of Rafi & Denisa</title>
+  <title>The Wedding of Denisa & Rafi</title>
   
-  <!-- Fonts & Font Awesome Icons -->
+  <!-- Google Fonts & FontAwesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&family=Alex+Brush&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fredoka:wght@400;500;600&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&family=Sacramento&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   
   <link rel="stylesheet" href="style.css" />
@@ -27,20 +27,20 @@
 
   <!-- COVER SECTION (MODAL OVERLAY) -->
   <section id="cover-screen" class="cover-container">
-    <div class="floral-frame floral-top-left"></div>
-    <div class="floral-frame floral-bottom-right"></div>
-    <div class="cover-content">
+    <div class="cover-card">
+      <div class="stamp-deco stamp-top-right">
+        <i class="fa-solid fa-train"></i>
+      </div>
       <p class="subtitle">The Wedding of</p>
-      <h1 class="couple-title">Rafi & Denisa</h1>
-      <p class="date-text"><i class="fa-regular fa-calendar"></i> Sabtu, 14 November 2026</p>
+      <h1 class="couple-title">Denisa & Rafi</h1>
       
       <div class="guest-box">
-        <p class="guest-label">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
-        <h3 id="guest-name">Tamu Undangan</h3>
+        <p class="guest-label">Yth.</p>
+        <h3 id="guest-name">Nama Tamu</h3>
       </div>
 
-      <button class="btn-primary" onclick="openInvitation()">
-        <i class="fa-solid fa-envelope-open"></i> Buka Undangan
+      <button class="btn-open" onclick="openInvitation()">
+        buka undangan
       </button>
     </div>
   </section>
@@ -48,195 +48,172 @@
   <!-- KONTEN UTAMA UNDANGAN -->
   <main id="main-content" class="content-container hidden">
     
-    <!-- Hero / Header -->
+    <!-- Hero / Frame Foto Ilustrasi -->
     <header class="hero-section">
-      <div class="hero-overlay">
-        <p class="subtitle">Walimatul 'Ursy</p>
-        <h1 class="couple-title">Rafi & Denisa</h1>
-        <p class="date-text">14 . 11 . 2026</p>
+      <div class="stamp-deco stamp-top-left">
+        <i class="fa-solid fa-building"></i>
       </div>
+      <div class="stamp-deco stamp-top-right">
+        <i class="fa-solid fa-train"></i>
+      </div>
+
+      <!-- Frame Wavy Ilustrasi -->
+      <div class="illustration-frame">
+        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&q=80&w=500" alt="Denisa & Rafi" class="illustration-img" />
+      </div>
+
+      <p class="subtitle font-hand">The Wedding of</p>
+      <h1 class="couple-title">Denisa & Rafi</h1>
+      <p class="date-badge">14112026</p>
     </header>
 
-    <!-- Ayat Suci -->
+    <!-- Ayat Suci / Quotes -->
     <section class="section-card text-center">
-      <div class="floral-divider"></div>
-      <div class="arabic-text">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً</div>
-      <p class="quote-text">
-        "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu istri-istri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang."
+      <p class="quote-english">
+        "And one of His signs is that He created for you spouses from among yourselves so that you may find comfort in them. And He has placed between you compassion and mercy. Surely in this are signs for people who reflect."
       </p>
       <p class="quote-author">(QS. Ar-Rum: 21)</p>
     </section>
 
     <!-- Mempelai -->
-    <section class="section-card">
-      <h2 class="section-title">Pasangan Mempelai</h2>
-      <p class="section-subtitle">Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan pernikahan kami:</p>
-      
-      <div class="couple-wrapper">
+    <section class="section-card text-center">
+      <div class="mempelai-grid">
         <!-- Groom -->
-        <div class="mempelai-box">
-          <div class="mempelai-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300" alt="Muhammad Rafi Fadhilah" class="mempelai-photo" />
-          </div>
-          <h3 class="mempelai-nama">Muhammad Rafi Fadhilah</h3>
-          <p class="mempelai-ortu">
-            Putra pertama dari pasangan<br />
-            <strong>Drs. H. Achmad Salahuddin M.Si.</strong><br />& <strong>Hj. Dwi Arshanti</strong>
+        <div class="mempelai-detail">
+          <h3 class="mempelai-name">Muhammad Rafi Fadhilah</h3>
+          <p class="ortu-text">
+            Putra dari<br />
+            <strong>Bapak Drs. H. Achmad Salahuddin</strong><br />
+            & <strong>Ibu Hj. Dwi Arshanti</strong>
           </p>
         </div>
 
-        <div class="ampersand">&</div>
+        <div class="heart-divider">♥</div>
 
         <!-- Bride -->
-        <div class="mempelai-box">
-          <div class="mempelai-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300" alt="Denisa Apriliani" class="mempelai-photo" />
-          </div>
-          <h3 class="mempelai-nama">Denisa Apriliani</h3>
-          <p class="mempelai-ortu">
-            Putri ketiga dari pasangan<br />
-            <strong>Alm. Muhammad Sofi'i</strong><br />& <strong>Sri Purwani</strong>
+        <div class="mempelai-detail">
+          <h3 class="mempelai-name">Denisa Apriliani</h3>
+          <p class="ortu-text">
+            Putri dari<br />
+            <strong>Bapak Ir. Muhammad Sofi'i (Alm)</strong><br />
+            & <strong>Ibu Sri Purwani</strong>
           </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rangkaian Acara -->
+    <section class="section-card">
+      <div class="event-box">
+        <h3 class="event-title">Akad</h3>
+        <p class="event-date">Sabtu, 14 November 2026</p>
+        <p class="event-time">05:00 - 08:00 WIB</p>
+        <p class="event-venue">
+          <strong>Gedung Slog Polri Cipinang</strong><br />
+          Gedung Slog Polri Jakarta, Pulogadung Jakarta Timur
+        </p>
+      </div>
+
+      <div class="event-box margin-top">
+        <h3 class="event-title">Resepsi</h3>
+        <p class="event-date">Sabtu, 14 November 2026</p>
+        <p class="event-time">10:30 - 16:00 WIB</p>
+        <p class="event-venue">
+          <strong>Gedung Slog Polri Cipinang</strong><br />
+          Gedung Slog Polri Jakarta, Pulogadung Jakarta Timur
+        </p>
+      </div>
+    </section>
+
+    <!-- Tanda Kasih / Amplop Digital -->
+    <section class="section-card text-center">
+      <h2 class="handwritten-title">Tanda Kasih</h2>
+      
+      <div class="bank-pill">
+        <span>Bank Mandiri</span>
+        <strong id="rek-mandiri">1234567890</strong>
+        <button onclick="copyText('1234567890')">Salin</button>
+      </div>
+
+      <div class="bank-pill margin-top-sm">
+        <span>Bank BCA</span>
+        <strong id="rek-bca">0987654321</strong>
+        <button onclick="copyText('0987654321')">Salin</button>
+      </div>
+    </section>
+
+    <!-- Love Story -->
+    <section class="section-card text-center">
+      <h2 class="handwritten-title">OUR LOVE STORY</h2>
+      <div class="story-box">
+        <h4>Awal Mula Bertemu (2016)</h4>
+        <p>
+          Semua bermula di sudut hari masa SMA. Dua orang remaja bertemu tanpa pernah menduga sejauh apa takdir akan membawa langkah ini. Saat itu, yang ada hanyalah rasa suka yang sederhana dan kepolosan khas masa muda kami. Menikmati detik demi detik tanpa beban, hingga tanpa disadari, hadir keyakinan perlahan bahwa cerita ini mungkin akan bertahan lebih lama dari yang kami bayangkan.
+        </p>
+      </div>
+    </section>
+
+    <!-- RSVP Form -->
+    <section class="section-card">
+      <h2 class="handwritten-title text-center">RSVP</h2>
+      
+      <form id="rsvp-form" class="mockup-form">
+        <div class="form-group">
+          <label>Nama:</label>
+          <input type="text" id="rsvp-name" placeholder="Nama Anda" required />
+        </div>
+
+        <div class="form-group">
+          <label>Pax:</label>
+          <select id="rsvp-pax">
+            <option value="1 pax">1 pax</option>
+            <option value="2 pax">2 pax</option>
+            <option value="3 pax">3 pax</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Konfirmasi kedatangan:</label>
+          <div class="radio-group">
+            <label><input type="radio" name="status" value="Bisa datang" checked /> Bisa datang</label>
+            <label><input type="radio" name="status" value="Tidak bisa datang" /> Tidak bisa datang</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Pesan & doa:</label>
+          <textarea id="rsvp-msg" rows="3" placeholder="Tulis pesan & doa..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Submit</button>
+      </form>
+
+      <!-- Pesan & Doa Tamu Lainnya -->
+      <div class="comments-container margin-top">
+        <h4 class="font-hand">Pesan & doa lainnya:</h4>
+        <div id="comments-list" class="comments-list">
+          <div class="comment-item">"Congrats guys!"</div>
+          <div class="comment-item">"Selamat Rafi & Denisa!"</div>
         </div>
       </div>
     </section>
 
     <!-- Countdown Timer -->
-    <section class="section-card text-center bg-gold">
-      <h2 class="section-title text-white">Menuju Hari Bahagia</h2>
-      <div id="timer" class="timer-container">
-        <div class="timer-box"><span id="days">0</span><small>Hari</small></div>
-        <div class="timer-box"><span id="hours">0</span><small>Jam</small></div>
-        <div class="timer-box"><span id="minutes">0</span><small>Menit</small></div>
-        <div class="timer-box"><span id="seconds">0</span><small>Detik</small></div>
+    <section class="section-card text-center bg-soft">
+      <h3 class="font-hand">Menuju hari bahagia</h3>
+      <div id="timer" class="timer-flex">
+        <div class="t-box"><span id="days">10</span><small>hari</small></div>
+        <div class="t-box"><span id="hours">10</span><small>jam</small></div>
+        <div class="t-box"><span id="minutes">10</span><small>menit</small></div>
+        <div class="t-box"><span id="seconds">10</span><small>detik</small></div>
       </div>
-    </section>
-
-    <!-- Love Story -->
-    <section class="section-card">
-      <h2 class="section-title">Kisah Cinta Kami</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-badge"><i class="fa-solid fa-heart"></i></div>
-          <div class="timeline-panel">
-            <h4>Pertama Bertemu</h4>
-            <span class="timeline-date">Tahun 2021</span>
-            <p>Awal mula kami saling mengenal dan memulai jalinan komunikasi yang hangat.</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-badge"><i class="fa-solid fa-ring"></i></div>
-          <div class="timeline-panel">
-            <h4>Lamaran</h4>
-            <span class="timeline-date">Awal 2026</span>
-            <p>Pertemuan kedua keluarga besar untuk mengikat komitmen suci menuju jenjang pernikahan.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Detail Acara -->
-    <section class="section-card">
-      <h2 class="section-title">Rangkaian Acara</h2>
-
-      <div class="event-grid">
-        <!-- Akad -->
-        <div class="event-card">
-          <i class="fa-solid fa-ring event-icon"></i>
-          <h3>Akad Nikah</h3>
-          <p class="event-time"><i class="fa-regular fa-clock"></i> Sabtu, 14 November 2026</p>
-          <p class="event-location">
-            <strong>Gedung Slog Polri Cipinang</strong><br />
-            Jl. Bekasi Timur Raya No.86, RT.1 / RW.6, Cipinang, Kec. Pulogadung, Jakarta Timur 13240
-          </p>
-        </div>
-
-        <!-- Resepsi -->
-        <div class="event-card">
-          <i class="fa-solid fa-champagne-glasses event-icon"></i>
-          <h3>Resepsi</h3>
-          <p class="event-time"><i class="fa-regular fa-clock"></i> Sabtu, 14 November 2026</p>
-          <p class="event-location">
-            <strong>Gedung Slog Polri Cipinang</strong><br />
-            Jl. Bekasi Timur Raya No.86, RT.1 / RW.6, Cipinang, Kec. Pulogadung, Jakarta Timur 13240
-          </p>
-        </div>
-      </div>
-
-      <div class="text-center margin-top">
-        <a href="https://maps.google.com/?q=Gedung+Slog+Polri+Cipinang" target="_blank" class="btn-secondary">
-          <i class="fa-solid fa-map-location-dot"></i> Petunjuk Ke Lokasi (Google Maps)
-        </a>
-      </div>
-    </section>
-
-    <!-- Galeri Foto -->
-    <section class="section-card text-center">
-      <h2 class="section-title">Galeri Momen</h2>
-      <div class="gallery-grid">
-        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=400" alt="Prewedding 1" />
-        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=400" alt="Prewedding 2" />
-        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&q=80&w=400" alt="Prewedding 3" />
-        <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=400" alt="Prewedding 4" />
-      </div>
-    </section>
-
-    <!-- Amplop Digital / Kado -->
-    <section class="section-card text-center">
-      <h2 class="section-title">Amplop Digital</h2>
-      <p class="section-subtitle">Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika Anda ingin memberi hadiah, kami menyediakan Amplop Digital di bawah ini:</p>
-
-      <div class="bank-card">
-        <i class="fa-solid fa-building-columns bank-icon"></i>
-        <h4>Bank BCA</h4>
-        <p class="account-number" id="rekening-bca">1234567890</p>
-        <p class="account-name">a.n. Muhammad Rafi Fadhilah</p>
-        <button class="btn-copy" onclick="copyRekening('1234567890')"><i class="fa-regular fa-copy"></i> Salin No. Rekening</button>
-      </div>
-
-      <div class="bank-card margin-top">
-        <i class="fa-solid fa-building-columns bank-icon"></i>
-        <h4>Bank Mandiri</h4>
-        <p class="account-number" id="rekening-mandiri">0987654321</p>
-        <p class="account-name">a.n. Denisa Apriliani</p>
-        <button class="btn-copy" onclick="copyRekening('0987654321')"><i class="fa-regular fa-copy"></i> Salin No. Rekening</button>
-      </div>
-    </section>
-
-    <!-- RSVP & Doa Ucapan -->
-    <section class="section-card">
-      <h2 class="section-title">Konfirmasi & Ucapan</h2>
-      <form id="rsvp-form" class="rsvp-form">
-        <div class="form-group">
-          <label for="rsvp-name">Nama Lengkap</label>
-          <input type="text" id="rsvp-name" required placeholder="Masukkan nama Anda" />
-        </div>
-        <div class="form-group">
-          <label for="rsvp-status">Status Kehadiran</label>
-          <select id="rsvp-status" required>
-            <option value="Hadir">Hadir</option>
-            <option value="Tidak Hadir">Tidak Dapat Hadir</option>
-            <option value="Ragu-ragu">Masih Ragu-ragu</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="rsvp-count">Jumlah Tamu</label>
-          <input type="number" id="rsvp-count" value="1" min="1" max="5" required />
-        </div>
-        <div class="form-group">
-          <label for="rsvp-message">Pesan & Doa Ucapan</label>
-          <textarea id="rsvp-message" rows="3" placeholder="Tuliskan ucapan & doa untuk kedua mempelai..."></textarea>
-        </div>
-        <button type="submit" class="btn-primary btn-block">
-          <i class="fa-brands fa-whatsapp"></i> Kirim Konfirmasi VIA WhatsApp
-        </button>
-      </form>
     </section>
 
     <!-- Footer -->
-    <footer class="footer-section">
-      <p>Terima kasih atas doa dan restu Anda</p>
-      <h3>Rafi & Denisa</h3>
+    <footer class="footer-card text-center">
+      <p>Terima kasih sudah menjadi bagian dari hari bahagia kami!</p>
+      <h2 class="couple-title-small">Denisa & Rafi</h2>
+      <small class="crafted-by">crafted by MORO</small>
     </footer>
 
   </main>
